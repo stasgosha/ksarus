@@ -1,0 +1,72 @@
+.write-to-us-section{
+	padding: var(--default-padding) 0;
+	background: $light-bg;
+
+	.section-caption{
+		margin-bottom: 32px;
+	}
+
+	.section-text{
+		margin-bottom: 24px;
+		margin-top: -16px;
+
+		p:not(:last-child){
+			margin-bottom: 8px;
+		}
+	}
+}
+
+.write-to-us-form{
+	.form-fields{
+		display: grid;
+		grid-gap: 32px 30px;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-flow: dense;
+
+		@media screen and (min-width: 768px){
+			.big-textarea{
+				grid-column: 2 / 3;
+				grid-row: 1 / 4;
+			}
+		}
+	}
+
+	.big-textarea{
+		position: relative;
+
+		.file-input{
+			position: absolute;
+			left: 1px;
+			bottom: 1px;
+			width: calc(100% - 1px * 2);
+			padding: 16px;
+			background: $light-bg;
+		}
+	}
+
+	.submit-field{
+		display: grid;
+		grid-template-columns: min-content 1fr;
+		grid-gap: 16px;
+		align-items: center;
+
+		.field-note{
+			@include p-small;
+		}
+
+		.btn{
+			min-height: 60px;
+
+			@media screen and (max-width: 991px){
+				padding-left: 13px;
+				padding-right: 13px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.form-fields{
+			grid-template-columns: 1fr;
+		}
+	}
+}

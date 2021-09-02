@@ -1,0 +1,11 @@
+.cases-section{
+	padding-bottom: 100px;
+
+	.client-results-card{
+		margin-bottom: 24px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}

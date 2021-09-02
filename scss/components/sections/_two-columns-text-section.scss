@@ -1,0 +1,23 @@
+.two-columns-text-section{
+	padding: 100px 0;
+	background: #eee;
+
+	.section-caption{
+		margin-bottom: 24px;
+	}
+
+	.section-text{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 40px;
+
+		@include p-big;
+	}
+
+	@media screen and (max-width: 991px){
+		.section-text{
+			grid-template-columns: 1fr;
+			grid-gap: 10px;
+		}
+	}
+}

@@ -1,0 +1,44 @@
+.goals-section{
+	padding: 100px 0;
+	background: #eee;
+
+	.section-inner{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 30px;
+	}
+
+	.section-caption{
+		.sc-subtitle{
+			margin-top: 24px;
+		}
+	}
+
+	.section-text{
+		padding-top: 24px;
+
+		ul{
+			@include default-ul;
+			margin-bottom: 1.5em;
+
+			li{
+				margin-bottom: 1.5em;
+
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		h3,h4{
+			@include h5;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		.section-inner{
+			grid-template-columns: 1fr;
+			grid-gap: 24px;
+		}
+	}
+}

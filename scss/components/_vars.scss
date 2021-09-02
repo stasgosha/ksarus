@@ -1,0 +1,38 @@
+// Fonts
+$main-font: 'Proxima Nova', Arial, sans-serif;
+$second-font: 'Oswald', $main-font;
+
+:root{
+	--header-height: 112px;
+	--default-padding: 50px;
+
+	@media screen and (max-width: 575px){
+		--header-height: 80px;
+	}
+}
+
+// Colors
+$blue: #039BE5;
+$darkblue: #0277BD;
+$red: #EB5757;
+
+$gray: #333;
+$dark: #333;
+$light: #333;
+
+$text-color: $gray;
+$text-dark: $dark;
+$text-light: $light;
+
+$primary: $blue;
+$accent: $darkblue;
+
+$light-bg: #eee;
+$lightblue-bg: rgba($primary, .1);
+$darkblue-bg: $darkblue;
+
+// Params
+$body-bg: #fff; // site background
+$t: .3s; // animation duration
+$r: 0; // default border radius
+$shadow: unset; // default card shadow

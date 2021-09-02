@@ -1,0 +1,30 @@
+.clients-section{
+	padding: var(--default-padding) 0 calc(var(--default-padding) * 1.5);
+
+	.section-caption{
+		margin-bottom: 32px;
+	}
+
+	.logos-list{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 70px 30px;
+		align-items: center;
+		justify-items: center;
+
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+			filter: grayscale(1);
+		}
+
+		@media screen and (max-width: 767px){
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@media screen and (max-width: 575px){
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}

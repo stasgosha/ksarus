@@ -1,0 +1,43 @@
+.cost-section{
+	padding: 50px 0;
+	background: #eee;
+
+	.section-inner{
+		display: grid;
+		grid-template-columns: 470px 1fr;
+		grid-gap: 80px;
+	}
+
+	.section-caption{
+		margin-bottom: 16px;
+	}
+
+	.section-text{
+		strong{
+			font-size: 24px;
+			line-height: 1.25;
+			font-weight: 900;
+		}
+	}
+
+	.section-image{
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		.section-inner{
+			grid-template-columns: 1fr;
+			grid-gap: 24px;
+		}
+
+		.section-image{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}

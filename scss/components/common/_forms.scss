@@ -1,0 +1,109 @@
+.form{
+	.input-field,
+	textarea,
+	.select-field select,
+	.select-field .jcf-select{
+		border: 1px solid rgba($dark, .5);
+		appearance: none;
+		background: transparent;
+		border-radius: 0;
+		flex: auto;
+		height: 60px;
+		font-size: 24px;
+		font-weight: 400;
+		color: $dark;
+		font-family: inherit;
+		padding: 0 16px;
+		outline: none !important;
+		transition: all $t;
+		width: 100%;
+		box-shadow: none;
+
+		&::placeholder{
+			opacity: 1;
+			color: rgba($dark, .5);
+		}
+
+		&:focus{
+			border-color: $primary;
+		}
+
+		&.error{
+			border-color: $red;
+			fill: rgba($red, .2);
+		}
+
+		@media screen and (max-width: 991px){
+			font-size: 18px;
+		}
+	}
+
+	textarea{
+		resize: none;
+		padding: 16px;
+		height: 100%;
+		min-height: 220px;
+		display: block;
+	}
+}
+
+.file-input{
+	width: 100%;
+
+	--icon-size: 30px;
+
+	.fake-label{
+		display: grid;
+		grid-template-columns: var(--icon-size) 1fr;
+		grid-gap: 10px;
+		align-items: center;
+		color: rgba($text-color, .5);
+		transition: all $t;
+		cursor: pointer;
+	}
+
+	.label-icon{
+		width: var(--icon-size);
+		height: var(--icon-size);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $text-dark;
+		background: #ddd;
+		transition: all $t;
+
+		svg{
+			width: 7px;
+			height: 16px;
+			display: block;
+			flex: none;
+			fill: currentcolor;
+		}
+	}
+
+	.selected-file{
+		display: none;
+	}
+
+	&.selected{
+		.selected-file{
+			display: block;
+		}
+
+		.default-text{
+			display: none;
+		}
+	}
+
+	&:hover,
+	&:focus-within{
+		.label-icon{
+			background: #ccc;
+		}
+
+		.fake-label{
+			color: $primary;
+		}
+	}
+}

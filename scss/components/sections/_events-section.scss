@@ -1,0 +1,76 @@
+.events-section{
+	padding: calc(var(--default-padding) * 2) 0 168px;
+
+	@media screen and (max-width: 991px){
+		--overlap: 255px;
+
+		.events-slider{
+			width: calc(100% + var(--overlap));
+			margin-right: calc(var(--overlap) * -1);
+
+			&:after{
+				content: '';
+				display: block;
+				width: 70px;
+				height: 100%;
+				position: absolute;
+				left: calc(100% - var(--overlap));
+				top: 0;
+				background: linear-gradient(270deg, #FFFFFF 33.33%, rgba(255, 255, 255, 0) 100%);
+			}
+
+			&:before{
+				content: '';
+				display: block;
+				width: 30vw;
+				height: 100%;
+				position: absolute;
+				left: calc(100% - var(--overlap) + 70px);
+				top: 0;
+				background: #fff;
+				z-index: 10;
+			}
+		}
+
+		.section-caption{
+			max-width: 270px;
+		}
+	}
+}
+
+.event-card{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	.card-info{
+		font-size: 14px;
+		line-height: 17px;
+		color: rgba($text-color, .6);
+		margin-bottom: 4px;
+
+		a{
+			color: rgba($primary, .6);
+			font-weight: bold;
+
+			&:hover,
+			&:focus{
+				color: $primary;
+			}
+		}
+	}
+
+	.card-caption{
+		margin-bottom: 8px;
+		min-height: calc(1.1875em * 2);
+
+		a{
+			color: inherit;
+
+			&:hover,
+			&:focus{
+				color: $primary;
+			}
+		}
+	}
+}

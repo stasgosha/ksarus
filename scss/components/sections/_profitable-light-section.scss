@@ -1,0 +1,31 @@
+.profitable-light-section{
+	padding: 150px 0 50px;
+
+	.section-inner{
+		display: grid;
+		grid-template-columns: 470px 1fr;
+		grid-gap: 30px;
+
+		@media screen and (max-width: 1199px){
+			grid-template-columns: 460px 1fr;
+		}
+
+		@media screen and (max-width: 991px){
+			grid-template-columns: 1fr;
+			grid-gap: 24px;
+		}
+	}
+
+	.section-content{
+		@include p-big;
+		margin-bottom: 0;
+
+		p:not(:last-child){
+			margin-bottom: 8px;
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		padding-top: 75px;
+	}
+}

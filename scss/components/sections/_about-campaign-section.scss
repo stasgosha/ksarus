@@ -1,0 +1,40 @@
+.about-campaign-section{
+	padding: 100px 0 50px;
+
+	.section-caption{
+		margin-bottom: 24px;
+	}
+
+	.section-inner{
+		display: flex;
+		align-items: center;
+	}
+
+	.section-content{
+		max-width: 566px;
+	}
+
+	.section-text{
+		@include p-big;
+	}
+
+	.section-image{
+		margin-left: 165px;
+
+		img{
+			max-width: 303px;
+			max-height: 287px;
+			display: block;
+		}
+	}
+
+	.section-footer{
+		margin-top: 24px;
+	}
+
+	@media screen and (max-width: 991px){
+		.section-image{
+			display: none;
+		}
+	}
+}

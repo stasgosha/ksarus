@@ -1,0 +1,84 @@
+.accordion{
+	margin-bottom: 10px;
+	border-bottom: 2px solid #333;
+
+	&:last-child{
+		margin-bottom: 0;
+		border-bottom: 0;
+	}
+
+	.ac-header{
+		padding: 20px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+
+		&:hover,
+		&:focus-within{
+			.ac-caption{
+				color: $primary;
+			}
+		}
+	}
+
+	.ac-caption{
+		font-size: 24px;
+		text-transform: uppercase;
+		font-weight: 900;
+		line-height: 1.2;
+		transition: all $t;
+
+		@media screen and (max-width: 575px){
+			font-size: 20px;
+		}
+	}
+
+	.ac-opener{
+		display: block;
+		width: 23px;
+		height: 23px;
+		flex: none;
+		margin-left: 24px;
+		background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 23'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.9.59h4v8.9h8.9v4h-8.9v8.9h-4v-8.9H0v-4h8.9V.59zm1 9.9H1v2h8.9v8.9h2v-8.9h8.9v-2h-8.9v-8.9h-2v8.9z' fill='%23039BE5'/%3E%3C/svg%3E") no-repeat center center / contain;
+		transition: all $t;
+	}
+
+	&.opened{
+		.ac-opener{
+			transform: rotate(135deg);
+		}
+	}
+
+	.ac-content{
+		padding: 6px 0 20px;
+		display: none;
+
+		h4{
+			@include h5;
+			margin-bottom: 24px;
+
+			&:not(:first-child){
+				margin-top: 50px;
+			}
+
+			@media screen and (max-width: 575px){
+				font-size: 20px;
+			}
+		}
+
+		ul{
+			@include default-ul;
+			grid-gap: 24px 30px;
+			grid-template-columns: repeat(3, 1fr);
+
+			@media screen and (max-width: 991px){
+				grid-template-columns: 1fr 1fr;
+			}
+
+			@media screen and (max-width: 767px){
+				grid-template-columns: 1fr;
+			}
+		}
+	}
+}

@@ -1,0 +1,83 @@
+.btn{
+
+	--btn-border-color: #{ $text-color };
+	--btn-text-color: #{ $text-color };
+	--btn-bg: transparent;
+
+	// --btn-hover-border-color: #{ $text-color };
+	// --btn-hover-color: #fff;
+	// --btn-hover-bg: #{ $text-color };
+
+	--btn-hover-color: #fff;
+	--btn-hover-bg: #{ $primary };
+	--btn-hover-border-color: #{ $primary };
+
+	text-align: center;
+	padding: 16px;
+	min-height: 51px;
+	border-radius: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: all $t;
+	cursor: pointer;
+	appearance: none;
+	white-space: nowrap;
+	color: var(--btn-text-color);
+	background: var(--btn-bg);
+
+	border: 1px solid var(--btn-border-color);
+
+	font-size: 16px;
+	line-height: 1.1875;
+	font-weight: bold;
+
+	&:hover,
+	&:focus{
+		background: var(--btn-hover-bg);
+		color: var(--btn-hover-color);
+		border-color: var(--btn-hover-border-color);
+		outline: none;
+	}
+
+	.btn-icon{
+		flex: none;
+		width: 11px;
+		height: 11px;
+		display: block;
+		fill: currentcolor;
+
+		&:last-child{
+			margin-left: 10px;
+		}
+
+		&:first-child{
+			margin-right: 10px;
+		}
+	}
+
+	&.btn-accent{
+		--btn-border-color: #{ $primary };
+		--btn-text-color: #{ $primary };
+		--btn-bg: transparent;
+
+		--btn-hover-color: #fff;
+		--btn-hover-bg: #{ $primary };
+		--btn-hover-border-color: #{ $primary };
+	}
+
+	&.btn-filled{
+		--btn-border-color: #{ $primary };
+		--btn-text-color: #fff;
+		--btn-bg: #{ $primary };
+
+		--btn-hover-color: #fff;
+		--btn-hover-bg: #{ $accent };
+		--btn-hover-border-color: #{ $accent };
+	}
+
+	&.btn-small{
+		padding: 9px 15px;
+		min-height: 39px;
+	}
+}

@@ -1,0 +1,43 @@
+.proposal-section{
+	padding: 50px 0;
+	background: #eee;
+
+	.section-caption{
+		margin-bottom: 24px;
+	}
+
+	.section-inner{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 30px;
+
+		h3, h4, h5{
+			@include h5;
+			font-weight: 900;
+			margin-bottom: 16px;
+		}
+
+		ul{
+			@include default-ul;
+		}
+	}
+
+	.section-footer{
+		margin-top: 24px;
+
+		@media screen and (min-width: 576px){
+			font-size: 24px;
+			line-height: 1.25;
+		}
+
+		strong{
+			font-weight: 800;
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.section-inner{
+			grid-template-columns: 1fr;
+		}
+	}
+}
