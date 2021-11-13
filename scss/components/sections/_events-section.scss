@@ -1,7 +1,7 @@
 .events-section{
 	padding: calc(var(--default-padding) * 2) 0 168px;
 
-	@media screen and (max-width: 991px){
+	@media screen and (max-width: 991px) and (min-width: 576px){
 		--overlap: 255px;
 
 		.events-slider{
@@ -34,6 +34,23 @@
 
 		.section-caption{
 			max-width: 270px;
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.section-header{
+			.slider-nav{
+				display: none;
+			}
+
+			.section-caption{
+				margin-bottom: 0;
+			}
+		}
+
+		.events-slider{
+			display: grid;
+			grid-gap: 24px;
 		}
 	}
 }

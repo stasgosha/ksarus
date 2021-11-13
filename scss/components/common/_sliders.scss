@@ -76,12 +76,16 @@
 		button{
 			width: 8px;
 			height: 8px;
-			background: $primary;
+			background: transparent;
 			padding: 0;
 			opacity: 1;
 			transition: all $t;
 			border-radius: 50%;
 			border: 2px solid $primary;
+
+			.actions-slider &{
+				border-color: #fff;
+			}
 
 			&:before{
 				display: none;
@@ -95,9 +99,11 @@
 		&.slick-active{
 			button{
 				opacity: 1;
-				width: 10px;
-				height: 10px;
-				background: transparent;
+				background: $primary;
+
+				.actions-slider &{
+					background: #fff;
+				}
 			}
 		}
 	}

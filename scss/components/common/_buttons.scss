@@ -66,6 +66,16 @@
 		--btn-hover-border-color: #{ $primary };
 	}
 
+	&.btn-white{
+		--btn-border-color: #fff;
+		--btn-text-color: #fff;
+		--btn-bg: transparent;
+
+		--btn-hover-color: #{ $primary };
+		--btn-hover-bg: #fff;
+		--btn-hover-border-color: #fff;
+	}
+
 	&.btn-filled{
 		--btn-border-color: #{ $primary };
 		--btn-text-color: #fff;

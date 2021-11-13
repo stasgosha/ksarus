@@ -124,13 +124,14 @@
 	.sm-visible-flex{ display: flex !important; }
 }
 
-.xs-visible, .xs-visible-flex, .xs-visible-inline{ display: none !important; }
+.xs-visible, .xs-visible-flex, .xs-visible-inline, .xs-visible-grid{ display: none !important; }
 
 @media screen and (max-width: 575px){
 	.xs-hidden{ display: none !important; }
 	.xs-visible{ display: block !important; }
 	.xs-visible-flex{ display: flex !important; }
 	.xs-visible-inline{ display: inline !important; }
+	.xs-visible-grid{ display: grid !important; }
 }
 
 .sub-xs-visible, .sub-xs-visible-flex{ display: none !important; }

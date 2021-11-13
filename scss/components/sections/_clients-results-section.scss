@@ -3,6 +3,10 @@
 
 	.section-header{
 		margin-bottom: 32px;
+
+		.section-caption{
+			margin-bottom: 0;
+		}
 	}
 }
 
@@ -183,6 +187,27 @@
 			.card-left{
 				order: unset;
 			}
+		}
+
+		.card-tags{
+			margin-top: 32px;
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.card-content{
+			padding: 24px 15px;
+		}
+
+		.card-stats{
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 16px;
+			margin-top: 16px;
+		}
+
+		.card-link{
+			margin-bottom: 0;
+			font-size: 14px;
 		}
 	}
 }

@@ -29,6 +29,33 @@ body{
 	img{
 		max-width: unset;
 	}
+
+	--header-height: 112px;
+
+	&.header-fixed{
+		--header-height: 77px;
+	}
+
+	scrollbar-color: $primary #dbe4f4;
+	scrollbar-width: thin;
+
+	// scrollbar-color: transparent transparent;
+	// scrollbar-width: thin;
+
+	&::-webkit-scrollbar{
+		width: 8px;
+	}
+
+	&::-webkit-scrollbar-track{
+		border-radius: 0;
+		background: #dbe4f4;
+	}
+
+	&::-webkit-scrollbar-thumb{
+		background: $primary;
+		border-radius: 4px;
+		width: 8px;
+	}
 }
 
 ul, ol{
